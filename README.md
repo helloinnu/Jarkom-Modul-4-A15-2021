@@ -3,10 +3,11 @@
 Laporan Resmi 4 Modul 4 Jaringan Komputer
 
 ### Anggota Kelompok :
-|NRP            |Nama        |
-|:-------------:|:----------:|
-|05111940000034 |Aimar Wibowo|
-|05111940000064 |Ifanu Antoni|
+
+|      NRP       |     Nama     |
+| :------------: | :----------: |
+| 05111940000034 | Aimar Wibowo |
+| 05111940000064 | Ifanu Antoni |
 
 ### Nomor 1
 
@@ -23,7 +24,7 @@ Laporan Resmi 4 Modul 4 Jaringan Komputer
 6. Pembagian IP dan routing harus SE-EFISIEN MUNGKIN.
 7. Pastikan semua NODE pada GNS3 dapat melakukan ping ke `its.ac.id`
 
-#### Perhitungan dengan Metode VLSM
+#### Perhitungan dengan Metode CIDR
 
 Menentukan jumlah alamat IP yang dibutuhkan oleh tiap subnet dan melakukan labeling netmask berdasarkan jumlah IP
 
@@ -86,8 +87,94 @@ Lakukan iptables pada foosha `iptables -t nat -A POSTROUTING -o eth0 -j MASQUERA
 Sekarang semua `router` dan `client` sudah terhubung dan bisa mengakses internet
 
 ![1.7](img/2.16.png)
+
 ![1.7](img/2.18.png)
 ![1.7](img/2.19.png)
+
+#### Perhitungan dengan Metode VLSM
+
+Menentukan jumlah alamat IP yang dibutuhkan oleh tiap subnet dan melakukan labeling netmask berdasarkan jumlah IP
+
+![1.1](img/1.1.png)
+
+| Subnet | Jumlah IP | Netmask |
+| :----: | :-------: | :------ |
+|   A1   |    101    | /25     |
+|   A2   |   2021    | /21     |
+|   A3   |     2     | /30     |
+|   A4   |    701    | /22     |
+|   A5   |     2     | /30     |
+|   A6   |   1001    | /22     |
+|   A7   |     2     | /30     |
+|   A8   |     2     | /30     |
+|   A9   |    521    | /22     |
+|  A10   |    502    | /23     |
+|  A11   |    13     | /28     |
+|  A12   |     2     | /30     |
+|  A13   |    252    | /24     |
+|  A14   |    721    | /22     |
+|  A15   |     2     | /30     |
+| TOTAL  |   5845    | /19     |
+
+Membagi IP menggunakan pohon IP
+
+![1.2](img/1.2.png)
+
+Sehingga didapatkan data subneting seperti tabel berikut
+![1.3](img/1.3.png)
+![1.4](img/1.4.png)
+![1.5](img/1.5.png)
+
+#### Configurasi pada Cisco Packet Tracer
+
+**Configurasi IP**
+Lakukan configurasi IP dan netmask pada setiap `client` dan `router` sesuai dengan dengan **data tabel subneting** yang ada
+Pada `router`
+
+1.  klik 2 kali `router`
+2.  pilih config
+3.  pilih interfaces yang di ingin di config
+4.  lakukan configurasi pada semua router
+    ![1.6](img/1.6.png)
+
+Pada `client`
+
+1.  klik 2 kali `client`
+2.  pilih desktop
+3.  pilih ip configuration
+4.  lakukan configurasi pada semua client
+    ![1.7](img/1.7.png)
+
+**Static Routing**
+Lakukan static routing pada setiap `router`
+
+`router foosha`
+![1.8](img/1.8.png)
+![1.8](img/1.9.png)
+![1.8](img/1.10.png)
+
+`router water7`
+![1.8](img/1.11.png)
+
+`router pucci`
+![1.8](img/1.12.png)
+
+`router guanhao`
+![1.8](img/1.13.png)
+
+`router alabasta`
+![1.8](img/1.14.png)
+
+`router oimo`
+![1.8](img/1.15.png)
+
+`router seaston`
+![1.8](img/1.16.png)
+
+Sekarang semua `router` dan `client` sudah terhubung
+![1.7](img/1.17.png)
+
+-
 
 ## Kendala
 
