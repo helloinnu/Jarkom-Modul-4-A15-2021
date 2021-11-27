@@ -1,6 +1,6 @@
 # Jarkom-Modul-4-A15-2021
 
-Laporan Resmi 4 Modul 4 Jaringan Komputer
+Laporan Resmi Modul 4 Jaringan Komputer Kelompok A15
 
 ### Anggota Kelompok :
 
