@@ -32,6 +32,7 @@ Menentukan jumlah alamat IP yang dibutuhkan oleh tiap subnet dan melakukan label
 
 Melakukan penggabungan dari subnet yang paling jauh hingga menjadi satu subnet penuh
 Kami menggunakan bantuan `tabel` untuk melakukan penggabungan subnet
+
 ![1.2](img/2.1.png)
 
 Membagi IP menggunakan pohon IP
@@ -52,35 +53,48 @@ Pada `router` dan `client`
 2.  pilih configure
 3.  pilih edit
 4.  lakukan configurasi pada semua router dan client
+
     `router foosha`
+    
     ![1.6](img/2.5.png)
+    
     `router water7`
+    
     ![1.2](img/2.4.png)
+    
     `client fukurou`
+    
     ![1.2](img/2.6.png)
 
 **Static Routing**
 Lakukan static routing pada setiap `router`
 
 `router foosha`
+
 ![1.8](img/2.7.png)
 
 `router water7`
+
 ![1.8](img/2.8.png)
 
 `router pucci`
+
 ![1.8](img/2.9.png)
 
 `router guanhao`
+
 ![1.8](img/2.10.png)
 
 `router alabasta`
+
 ![1.8](img/2.11.png)
 
 `router oimo`
+
 ![1.8](img/2.13.png)
 
 `router seaston`
+
 ![1.8](img/2.14.png)
 
 Lakukan iptables pada foosha `iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE`
@@ -89,6 +103,7 @@ Sekarang semua `router` dan `client` sudah terhubung dan bisa mengakses internet
 ![1.7](img/2.16.png)
 
 ![1.7](img/2.18.png)
+
 ![1.7](img/2.19.png)
 
 #### Perhitungan dengan Metode VLSM
@@ -121,8 +136,11 @@ Membagi IP menggunakan pohon IP
 ![1.2](img/1.2.png)
 
 Sehingga didapatkan data subneting seperti tabel berikut
+
 ![1.3](img/1.3.png)
+
 ![1.4](img/1.4.png)
+
 ![1.5](img/1.5.png)
 
 #### Configurasi pada Cisco Packet Tracer
@@ -135,6 +153,7 @@ Pada `router`
 2.  pilih config
 3.  pilih interfaces yang di ingin di config
 4.  lakukan configurasi pada semua router
+
     ![1.6](img/1.6.png)
 
 Pada `client`
@@ -143,35 +162,46 @@ Pada `client`
 2.  pilih desktop
 3.  pilih ip configuration
 4.  lakukan configurasi pada semua client
+    
     ![1.7](img/1.7.png)
 
 **Static Routing**
 Lakukan static routing pada setiap `router`
 
 `router foosha`
+
 ![1.8](img/1.8.png)
+
 ![1.8](img/1.9.png)
+
 ![1.8](img/1.10.png)
 
 `router water7`
+
 ![1.8](img/1.11.png)
 
 `router pucci`
+
 ![1.8](img/1.12.png)
 
 `router guanhao`
+
 ![1.8](img/1.13.png)
 
 `router alabasta`
+
 ![1.8](img/1.14.png)
 
 `router oimo`
+
 ![1.8](img/1.15.png)
 
 `router seaston`
+
 ![1.8](img/1.16.png)
 
 Sekarang semua `router` dan `client` sudah terhubung
+
 ![1.7](img/1.17.png)
 
 -
